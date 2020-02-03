@@ -1,0 +1,34 @@
+
+
+  <main padding>
+    <div text-center>
+      <h3 class="titulo">Table to excel</h3>
+      <button class="descargar" (click)="exportexcel()">Descargar Excel</button>
+    </div>
+
+    <table class="table table-striped table-bordered table-sm" id="excel-table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Body</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of posts ; let i = index">
+        <th scope="row">{{i+1}}</th>
+          <td>{{post.id}}</td>
+          <td>{{post.title}}</td>
+          <td>{{post.body}}</td>
+
+          <td><button  class="btn btn-button btn-success">Detalle</button>
+
+        </tr>
+      </tbody>
+    </table>
+
+
+
+  </main>
